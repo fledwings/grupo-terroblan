@@ -162,117 +162,119 @@ export default function Header() {
         </div>
       </motion.header>
 
-      {/* Mobile Sidebar (Simple Sheet) */}
+      {/* Mobile Sidebar */}
       <AnimatePresence>
         {isOpen && (
-          <>
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
-              className="fixed inset-0 z-[60] bg-black/50 md:hidden"
-            />
-            <motion.div 
-              initial={{ x: '-100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '-100%' }}
-              transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed inset-y-0 left-0 z-[70] w-[300px] sm:w-[400px] bg-white shadow-xl md:hidden flex flex-col"
-            >
-              <div className="p-4 border-b flex items-center justify-between">
-                <div className="flex items-center">
-                  <img src="https://sensible-spoonbill-485.convex.cloud/api/storage/c8b5ff87-c46c-4113-845b-d9cb60c0cd2c" alt="Grupo Terroblan" className="h-8 w-auto" />
-                </div>
-                <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-                  <X className="h-5 w-5" />
-                  <span className="sr-only">Cerrar menú</span>
-                </Button>
+          <motion.div 
+            key="overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsOpen(false)}
+            className="fixed inset-0 z-[60] bg-black/50 md:hidden"
+          />
+        )}
+        {isOpen && (
+          <motion.div 
+            key="sidebar"
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            className="fixed inset-y-0 left-0 z-[70] w-[300px] sm:w-[400px] bg-white shadow-xl md:hidden flex flex-col"
+          >
+            <div className="p-4 border-b flex items-center justify-between">
+              <div className="flex items-center">
+                <img src="https://sensible-spoonbill-485.convex.cloud/api/storage/c8b5ff87-c46c-4113-845b-d9cb60c0cd2c" alt="Grupo Terroblan" className="h-8 w-auto" />
               </div>
-              <nav className="flex flex-col gap-4 p-6 overflow-y-auto">
-                <button onClick={() => scrollTo('hero')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Inicio</button>
-                <button onClick={() => scrollTo('about')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Nosotros</button>
-                <button onClick={() => scrollTo('ventajas')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Ventajas</button>
-                <div className="flex flex-col gap-2">
-                  <button 
-                    onClick={() => setIsSolutionsOpen(!isSolutionsOpen)} 
-                    className="flex items-center justify-between text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors"
-                  >
-                    Soluciones
-                    {isSolutionsOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
-                  </button>
-                  
-                  <AnimatePresence>
-                    {isSolutionsOpen && (
-                      <motion.div 
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="flex flex-col gap-3 pl-4 pt-2 overflow-hidden"
-                      >
-                        <button 
-                          onClick={() => scrollTo('solutions')} 
-                          className="text-left text-base font-semibold text-orange-600 hover:text-orange-700 transition-colors mb-1"
-                        >
-                          Ver todas las soluciones
-                        </button>
-                        {solutionsData.map((solution) => (
-                          <button 
-                            key={solution.id}
-                            onClick={() => {
-                              navigate(`/solutions/${solution.id}`);
-                              window.scrollTo(0, 0);
-                              setIsOpen(false);
-                            }} 
-                            className="text-left text-base text-slate-500 hover:text-orange-500 transition-colors"
-                          >
-                            {solution.title}
-                          </button>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-                <button onClick={() => scrollTo('clients')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Clientes</button>
-                <button onClick={() => scrollTo('locations')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Ubicaciones</button>
-                
-                <div className="flex flex-col gap-2">
-                  <button 
-                    onClick={() => setIsLegalOpen(!isLegalOpen)} 
-                    className="flex items-center justify-between text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors"
-                  >
-                    Aspectos legales
-                    {isLegalOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
-                  </button>
-                  
-                  <AnimatePresence>
-                    {isLegalOpen && (
-                      <motion.div 
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="flex flex-col gap-3 pl-4 pt-2 overflow-hidden"
-                      >
-                        <button onClick={() => { setIsOpen(false); setPrivacyOpen(true); }} className="text-left text-base text-slate-500 hover:text-orange-500 transition-colors">Políticas de Privacidad</button>
-                        <button onClick={() => { setIsOpen(false); setConditionsOpen(true); }} className="text-left text-base text-slate-500 hover:text-orange-500 transition-colors">Condiciones de Uso</button>
-                        <button onClick={() => { setIsOpen(false); setTermsOpen(true); }} className="text-left text-base text-slate-500 hover:text-orange-500 transition-colors">Términos y Condiciones</button>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                <Button 
-                  className="w-full mt-4 bg-orange-600 hover:bg-orange-700 text-white"
-                  onClick={() => {
-                    navigate('/contacto');
-                    setIsOpen(false);
-                  }}
+              <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
+                <X className="h-5 w-5" />
+                <span className="sr-only">Cerrar menú</span>
+              </Button>
+            </div>
+            <nav className="flex flex-col gap-4 p-6 overflow-y-auto">
+              <button onClick={() => scrollTo('hero')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Inicio</button>
+              <button onClick={() => scrollTo('about')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Nosotros</button>
+              <button onClick={() => scrollTo('ventajas')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Ventajas</button>
+              <div className="flex flex-col gap-2">
+                <button 
+                  onClick={() => setIsSolutionsOpen(!isSolutionsOpen)} 
+                  className="flex items-center justify-between text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors"
                 >
-                  Contacto
-                </Button>
-              </nav>
-            </motion.div>
-          </>
+                  Soluciones
+                  {isSolutionsOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+                </button>
+                
+                <AnimatePresence>
+                  {isSolutionsOpen && (
+                    <motion.div 
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="flex flex-col gap-3 pl-4 pt-2 overflow-hidden"
+                    >
+                      <button 
+                        onClick={() => scrollTo('solutions')} 
+                        className="text-left text-base font-semibold text-orange-600 hover:text-orange-700 transition-colors mb-1"
+                      >
+                        Ver todas las soluciones
+                      </button>
+                      {solutionsData.map((solution) => (
+                        <button 
+                          key={solution.id}
+                          onClick={() => {
+                            navigate(`/solutions/${solution.id}`);
+                            window.scrollTo(0, 0);
+                            setIsOpen(false);
+                          }} 
+                          className="text-left text-base text-slate-500 hover:text-orange-500 transition-colors"
+                        >
+                          {solution.title}
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+              <button onClick={() => scrollTo('clients')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Clientes</button>
+              <button onClick={() => scrollTo('locations')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Ubicaciones</button>
+              
+              <div className="flex flex-col gap-2">
+                <button 
+                  onClick={() => setIsLegalOpen(!isLegalOpen)} 
+                  className="flex items-center justify-between text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors"
+                >
+                  Aspectos legales
+                  {isLegalOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+                </button>
+                
+                <AnimatePresence>
+                  {isLegalOpen && (
+                    <motion.div 
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="flex flex-col gap-3 pl-4 pt-2 overflow-hidden"
+                    >
+                      <button onClick={() => { setIsOpen(false); setPrivacyOpen(true); }} className="text-left text-base text-slate-500 hover:text-orange-500 transition-colors">Políticas de Privacidad</button>
+                      <button onClick={() => { setIsOpen(false); setConditionsOpen(true); }} className="text-left text-base text-slate-500 hover:text-orange-500 transition-colors">Condiciones de Uso</button>
+                      <button onClick={() => { setIsOpen(false); setTermsOpen(true); }} className="text-left text-base text-slate-500 hover:text-orange-500 transition-colors">Términos y Condiciones</button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              <Button 
+                className="w-full mt-4 bg-orange-600 hover:bg-orange-700 text-white"
+                onClick={() => {
+                  navigate('/contacto');
+                  setIsOpen(false);
+                }}
+              >
+                Contacto
+              </Button>
+            </nav>
+          </motion.div>
         )}
       </AnimatePresence>
 
