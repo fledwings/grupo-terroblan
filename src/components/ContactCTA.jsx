@@ -3,8 +3,11 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Phone, Mail, User, FileText, Briefcase } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useNavigate } from 'react-router-dom';
 
 export default function ContactCTA() {
+  const navigate = useNavigate();
+
   return (
     <section id="contact" className="py-24 bg-slate-900 text-white relative overflow-hidden">
       <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-orange-500 rounded-full blur-3xl opacity-20 pointer-events-none" />
@@ -19,21 +22,17 @@ export default function ContactCTA() {
         >
           <div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">¿Listo para empezar su proyecto?</h2>
-            <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto">
+            <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
               Póngase en contacto con nuestro equipo de expertos. Estamos listos para ofrecerle las mejores soluciones industriales.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button size="lg" className="bg-orange-600 hover:bg-orange-700 w-full sm:w-auto">
+            <Button size="lg" className="bg-orange-600 hover:bg-orange-700 w-full sm:w-auto" onClick={() => navigate('/contacto')}>
               <Briefcase className="mr-2 h-5 w-5" />
               Solicitar servicio
             </Button>
-            <Button size="lg" variant="outline" className="border-slate-500 bg-transparent hover:bg-slate-800 text-white w-full sm:w-auto">
-              <FileText className="mr-2 h-5 w-5" />
-              Solicitar presupuesto
-            </Button>
-            <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white text-slate-900 hover:bg-slate-200">
+            <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white text-slate-900 hover:bg-slate-200" onClick={() => navigate('/contacto')}>
               Contacto general
             </Button>
           </div>
@@ -52,8 +51,8 @@ export default function ContactCTA() {
                   <User className="h-8 w-8 text-orange-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white">Atención Personalizada</h3>
-                <p className="text-lg text-slate-300">Ing. Arturo Trejo</p>
-                <p className="text-sm text-slate-500">Asesoría directa para su proyecto</p>
+                <p className="text-lg text-white">Ing. Arturo Trejo</p>
+                <p className="text-sm text-white">Asesoría directa para su proyecto</p>
               </CardContent>
             </Card>
           </motion.div>
@@ -73,7 +72,7 @@ export default function ContactCTA() {
                 <a href="tel:4426767696" className="text-lg font-medium text-white hover:text-orange-400 transition-colors block">
                   442-676-7696
                 </a>
-                <p className="text-sm text-slate-500">Lunes a Viernes, 9:00 - 18:00</p>
+                <p className="text-sm text-white">Lunes a Viernes, 9:00 - 18:00</p>
               </CardContent>
             </Card>
           </motion.div>
@@ -93,7 +92,7 @@ export default function ContactCTA() {
                 <a href="mailto:arturo.trejo@grupoter.com.mx" className="text-md font-medium text-white hover:text-orange-400 transition-colors block break-all">
                   arturo.trejo@grupoter.com.mx
                 </a>
-                <p className="text-sm text-slate-500">Respuestas en menos de 24h</p>
+                <p className="text-sm text-white">Respuestas en menos de 24h</p>
               </CardContent>
             </Card>
           </motion.div>

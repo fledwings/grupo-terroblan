@@ -1,13 +1,10 @@
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Wrench, Phone, ShieldCheck, Zap, BarChart3 } from 'lucide-react';
 
 export default function Hero() {
   const containerRef = useRef(null);
-  const { scrollY } = useScroll();
-  const gradientOpacity = useTransform(scrollY, [0, 400], [0, 1]);
-  const contentOpacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
@@ -45,9 +42,7 @@ export default function Hero() {
       className="relative overflow-hidden bg-slate-950 min-h-[90vh] flex items-center pt-28 pb-20 lg:pt-20 lg:pb-32"
     >
       {/* Background Image and Overlays */}
-      <motion.div 
-        className="absolute inset-0 z-0 pointer-events-none"
-      >
+      <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Concrete Plant Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -67,11 +62,10 @@ export default function Hero() {
         {/* Glowing orbs */}
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-[100px]" />
         <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px]" />
-      </motion.div>
+      </div>
 
-      {/* Fade/Gradient transition effect on scroll */}
-      <motion.div 
-        style={{ opacity: gradientOpacity }}
+      {/* Fade/Gradient transition effect */}
+      <div 
         className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none z-0"
       />
 
@@ -83,10 +77,9 @@ export default function Hero() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col items-center text-center lg:items-start lg:text-left max-w-3xl mx-auto lg:mx-0"
+            className="flex flex-col items-center text-center lg:items-start lg:text-left max-w-3xl mx-auto lg:mx-0 lg:pl-12 xl:pl-24"
           >
-            {/* Elements that fade out on scroll */}
-            <motion.div style={{ opacity: contentOpacity }}>
+            <div>
               <motion.h1 
                 variants={itemVariants}
                 className="text-[2rem] min-[400px]:text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
@@ -102,7 +95,7 @@ export default function Hero() {
               >
                 Grupo Terroblan Industrial es su socio estratégico en construcción, mantenimiento y servicios integrales para la industria, garantizando resultados excepcionales.
               </motion.p>
-            </motion.div>
+            </div>
             
             {/* Buttons: DO NOT fade out, as requested */}
             <motion.div 
@@ -120,7 +113,7 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-slate-700 bg-slate-900/50 text-white hover:bg-slate-800 hover:text-white backdrop-blur-sm transition-all duration-300 h-12 px-8 text-base"
+                className="border-slate-700 bg-slate-900/50 text-white hover:bg-slate-800 hover:text-white transition-all duration-300 h-12 px-8 text-base"
                 asChild
               >
                 <a href="tel:4426767696">
@@ -132,7 +125,7 @@ export default function Hero() {
           </motion.div>
           
           {/* Visual abstract graphic area */}
-          <motion.div style={{ opacity: contentOpacity }} className="hidden lg:block w-full">
+          <div className="hidden lg:block w-full">
             <motion.div 
               className="relative h-[500px] w-full"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -145,11 +138,13 @@ export default function Hero() {
               <motion.div 
                 animate={{ rotate: 360 }}
                 transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                style={{ willChange: "transform" }}
                 className="relative w-80 h-80 rounded-full border border-slate-800/80 border-dashed flex items-center justify-center"
               >
                 <motion.div 
                   animate={{ rotate: -360 }}
                   transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                  style={{ willChange: "transform" }}
                   className="absolute w-64 h-64 rounded-full border border-orange-500/20 flex items-center justify-center"
                 >
                   <div className="w-48 h-48 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center shadow-2xl border border-slate-700/50">
@@ -168,7 +163,8 @@ export default function Hero() {
               <motion.div 
                 animate={{ y: [0, -15, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-20 left-4 bg-slate-900/80 backdrop-blur-md border border-slate-800 p-4 rounded-2xl shadow-xl flex items-center gap-4 z-0"
+                style={{ willChange: "transform" }}
+                className="absolute top-20 left-4 bg-slate-900/95 border border-slate-800 p-4 rounded-2xl shadow-xl flex items-center gap-4 z-0"
               >
                 <div className="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-400">
                   <ShieldCheck className="w-5 h-5" />
@@ -182,7 +178,8 @@ export default function Hero() {
               <motion.div 
                 animate={{ y: [0, 15, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute bottom-20 -right-8 bg-slate-900/80 backdrop-blur-md border border-slate-800 p-4 rounded-2xl shadow-xl flex items-center gap-4"
+                style={{ willChange: "transform" }}
+                className="absolute bottom-20 -right-8 bg-slate-900/95 border border-slate-800 p-4 rounded-2xl shadow-xl flex items-center gap-4"
               >
                 <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
                   <Zap className="w-5 h-5" />
@@ -196,7 +193,8 @@ export default function Hero() {
               <motion.div 
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute -top-4 right-10 bg-slate-900/80 backdrop-blur-md border border-slate-800 p-4 rounded-2xl shadow-xl flex items-center gap-4"
+                style={{ willChange: "transform" }}
+                className="absolute -top-4 right-10 bg-slate-900/95 border border-slate-800 p-4 rounded-2xl shadow-xl flex items-center gap-4"
               >
                 <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400">
                   <BarChart3 className="w-5 h-5" />
@@ -207,8 +205,8 @@ export default function Hero() {
                 </div>
               </motion.div>
             </div>
-          </motion.div>
-          </motion.div>
+            </motion.div>
+          </div>
           
         </div>
       </div>

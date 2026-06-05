@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import SolutionDetail from './pages/SolutionDetail';
+import Contacto from './pages/Contacto';
 
 function AppContent() {
   return (
@@ -13,6 +14,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/solutions/:id" element={<SolutionDetail />} />
+          <Route path="/contacto" element={<Contacto />} />
         </Routes>
       </main>
       <Footer />

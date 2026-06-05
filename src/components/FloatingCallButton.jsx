@@ -8,28 +8,12 @@ export default function FloatingCallButton() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroSection = document.getElementById('hero');
-      const aboutSection = document.getElementById('about');
-      
-      if (heroSection && aboutSection) {
-        // Show the button when we've scrolled past the hero section
-        // (i.e. we are at or past the "Nosotros" section)
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        
-        // If the bottom of the hero section is above the middle of the screen, we consider
-        // ourselves in the next section
-        if (heroBottom <= window.innerHeight / 2) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
+      // Avoid getBoundingClientRect() on every scroll tick to prevent layout thrashing
+      // Simply use window.scrollY which is very cheap to read
+      if (window.scrollY > 500) {
+        setIsVisible(true);
       } else {
-        // Fallback
-        if (window.scrollY > window.innerHeight * 0.5) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
+        setIsVisible(false);
       }
     };
 

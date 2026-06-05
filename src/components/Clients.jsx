@@ -16,10 +16,13 @@ const clients = [
 
 export default function Clients() {
   return (
-    <section id="clients" className="py-24 bg-slate-50">
-      <div className="container mx-auto px-4">
+    <section id="clients" className="py-24 bg-slate-900 text-white relative overflow-hidden">
+      <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-orange-500 rounded-full blur-3xl opacity-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-500 rounded-full blur-3xl opacity-10 pointer-events-none" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Empresas que confían en nosotros</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Empresas que confían en nosotros</h2>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 max-w-5xl mx-auto">
@@ -30,12 +33,12 @@ export default function Clients() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className={`px-6 py-4 bg-white rounded-lg border border-slate-200 shadow-sm text-center min-w-[140px] flex-grow md:flex-grow-0 flex items-center justify-center ${client.logo ? 'min-h-[74px]' : 'h-[74px]'}`}
+              className={`px-6 py-4 bg-slate-800 rounded-lg border border-slate-700 shadow-sm text-center min-w-[140px] flex-grow md:flex-grow-0 flex items-center justify-center hover:bg-slate-700/80 transition-colors ${client.logo ? 'min-h-[74px]' : 'h-[74px]'}`}
             >
               {client.logo ? (
                 <img src={client.logo} alt={client.name} className="h-14 md:h-16 w-auto scale-125 object-contain" />
               ) : (
-                <span className="font-semibold text-slate-700 whitespace-nowrap">{client.name}</span>
+                <span className="font-semibold text-white whitespace-nowrap">{client.name}</span>
               )}
             </motion.div>
           ))}

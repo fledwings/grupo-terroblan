@@ -48,7 +48,7 @@ export default function VentajasComerciales() {
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed scale-105"
         style={{ backgroundImage: "url('https://sensible-spoonbill-485.convex.cloud/api/storage/7b461e0e-959b-4b58-b6f7-e42c11c5b64f')" }}
       >
-        <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-slate-950/90"></div>
       </div>
 
       <div className="container relative z-10 mx-auto px-6 max-w-7xl">

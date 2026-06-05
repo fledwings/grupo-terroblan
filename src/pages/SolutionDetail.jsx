@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, CheckCircle2, ChevronRight, Image } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { solutionsData } from '../data/solutionsData';
@@ -115,34 +115,7 @@ export default function SolutionDetail() {
               </Card>
             </motion.div>
 
-            {solution.images && solution.images.length > 0 && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-              >
-                <Card className="border-slate-200 shadow-sm overflow-hidden">
-                  <CardContent className="p-8">
-                    <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                      <Image className="w-6 h-6 text-orange-500" />
-                      Galería de Proyectos
-                    </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {solution.images.map((imgSrc, idx) => (
-                        <div key={idx} className="relative aspect-video rounded-xl overflow-hidden group">
-                          <img 
-                            src={imgSrc} 
-                            alt={`Proyecto de ${solution.title} ${idx + 1}`} 
-                            className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-                          />
-                          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            )}
+
           </div>
 
           {/* Sidebar Column */}

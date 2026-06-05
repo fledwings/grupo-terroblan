@@ -24,7 +24,7 @@ export const solutionsData = [
       'Montaje de estructuras metálicas y equipos pesados.'
     ],
     images: [
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/c243624a-40f5-4025-bc9b-ee278d1d02f2',
+      'https://sensible-spoonbill-485.convex.cloud/api/storage/f134213f-659f-4f43-9d22-abecf3fc5c7e',
       'https://sensible-spoonbill-485.convex.cloud/api/storage/ccf577fe-3e88-4fd3-a78b-772ada1e864b',
       'https://sensible-spoonbill-485.convex.cloud/api/storage/097536cb-4e6d-492e-8c09-84fd8e05c581'
     ]
@@ -104,7 +104,7 @@ export const solutionsData = [
       'Almacenamiento temporal de componentes industriales.'
     ],
     images: [
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/95cec54f-d968-4c0b-896d-ea700f7525ce',
+      'https://sensible-spoonbill-485.convex.cloud/api/storage/21d5bbd2-8501-4506-8f68-15f28ebcb9fe',
       'https://sensible-spoonbill-485.convex.cloud/api/storage/b21853f5-7045-4169-9c3f-845ea1632db6'
     ]
   },
@@ -131,7 +131,7 @@ export const solutionsData = [
       'Actualización tecnológica de tableros de control.'
     ],
     images: [
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/f1a639f4-69c2-4ff3-9e20-b1f73ba7f12c',
+      'https://sensible-spoonbill-485.convex.cloud/api/storage/d1c23d82-c562-4f6a-8c37-198c6eb7382f',
       'https://sensible-spoonbill-485.convex.cloud/api/storage/097536cb-4e6d-492e-8c09-84fd8e05c581'
     ]
   },
@@ -158,7 +158,7 @@ export const solutionsData = [
       'Migración de sistemas de control obsoletos.'
     ],
     images: [
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/02fe9eea-c389-4971-ba78-8399c206202e',
+      'https://sensible-spoonbill-485.convex.cloud/api/storage/f91f7840-11c3-4d21-b664-012944777a02',
       'https://sensible-spoonbill-485.convex.cloud/api/storage/4493f943-8b22-4e10-9cae-e78cca45bd72'
     ]
   },
@@ -185,7 +185,7 @@ export const solutionsData = [
       'Análisis de aceite en equipos hidráulicos.'
     ],
     images: [
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/6df0cb42-d19e-4e0c-bff1-b074c20815fa',
+      'https://sensible-spoonbill-485.convex.cloud/api/storage/2eb88951-1f63-46ca-a42e-5aff0c27df97',
       'https://sensible-spoonbill-485.convex.cloud/api/storage/bdeccb22-3814-43de-8b2d-b875371aac46'
     ]
   },

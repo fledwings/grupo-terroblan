@@ -44,6 +44,7 @@ export default function Header() {
   }, [isOpen]);
 
   const scrollTo = (id) => {
+    setIsOpen(false);
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
@@ -57,20 +58,21 @@ export default function Header() {
             behavior: 'smooth'
           });
         }
-      }, 100);
+      }, 300);
     } else {
-      const el = document.getElementById(id);
-      if (el) {
-        const headerOffset = 80;
-        const elementPosition = el.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - headerOffset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          const headerOffset = 80;
+          const elementPosition = el.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.scrollY - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
     }
-    setIsOpen(false);
   };
 
   return (
@@ -97,10 +99,11 @@ export default function Header() {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6 ml-auto">
+            <button onClick={() => scrollTo('hero')} className="text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors">Inicio</button>
             <button onClick={() => scrollTo('about')} className="text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors">Nosotros</button>
             <button onClick={() => scrollTo('ventajas')} className="text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors">Ventajas</button>
             
-            <DropdownMenu>
+            <DropdownMenu modal={false}>
               <DropdownMenuTrigger asChild>
                 <button className="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors outline-none">
                   Soluciones <ChevronDown className="h-4 w-4" />
@@ -151,7 +154,7 @@ export default function Header() {
           <div className="hidden md:flex items-center ml-6">
             <Button 
               className="bg-orange-600 hover:bg-orange-700 text-white"
-              onClick={() => scrollTo('contact')}
+              onClick={() => navigate('/contacto')}
             >
               Contacto
             </Button>
@@ -187,6 +190,7 @@ export default function Header() {
                 </Button>
               </div>
               <nav className="flex flex-col gap-4 p-6 overflow-y-auto">
+                <button onClick={() => scrollTo('hero')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Inicio</button>
                 <button onClick={() => scrollTo('about')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Nosotros</button>
                 <button onClick={() => scrollTo('ventajas')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Ventajas</button>
                 <div className="flex flex-col gap-2">
@@ -259,7 +263,10 @@ export default function Header() {
 
                 <Button 
                   className="w-full mt-4 bg-orange-600 hover:bg-orange-700 text-white"
-                  onClick={() => scrollTo('contact')}
+                  onClick={() => {
+                    navigate('/contacto');
+                    setIsOpen(false);
+                  }}
                 >
                   Contacto
                 </Button>
