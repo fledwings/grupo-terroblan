@@ -35,10 +35,11 @@ export default function Footer() {
           
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <HardHat className="h-6 w-6 text-orange-600" />
-              <span className="font-bold text-lg text-white tracking-tight">
-                Grupo Terroblan
-              </span>
+              <img 
+                src="https://sensible-spoonbill-485.convex.cloud/api/storage/6b22e3c3-3e35-4e6b-a193-ba4499b27820" 
+                alt="Grupo Terroblan" 
+                className="h-12 w-auto rounded-xl" 
+              />
             </div>
             <p className="text-sm">
               Construimos confianza, creamos futuro. Soluciones integrales para la industria.

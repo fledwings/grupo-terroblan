@@ -11,7 +11,8 @@ const clients = [
   { name: 'CAQ', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/8010fee4-9a3f-4c7b-96cc-985075e3ef60' }, 
   { name: 'Cheersson', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/4baed3a3-4d0c-4b92-811d-8ff89d411f95' }, 
   { name: 'Niuco', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/c4bf5b15-45cf-4db1-9cf8-b4b4c511f83f' }, 
-  { name: 'Tío Beto', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/99831427-de3d-4291-a507-f12106efb378' }
+  { name: 'Tío Beto', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/99831427-de3d-4291-a507-f12106efb378' },
+  { name: 'Nuevo Cliente', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/be9911a1-6bce-4087-8145-ac7f3a0b8d06' }
 ];
 
 export default function Clients() {

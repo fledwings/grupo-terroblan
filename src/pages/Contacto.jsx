@@ -90,7 +90,6 @@ export default function Contacto() {
               
               <CardContent className="p-8 relative z-10 space-y-8 h-full flex flex-col">
                 <div>
-                  <img src="https://sensible-spoonbill-485.convex.cloud/api/storage/c8b5ff87-c46c-4113-845b-d9cb60c0cd2c" alt="Grupo Terroblan" className="h-12 w-auto bg-white p-2 rounded mb-6" />
                   <h3 className="text-2xl font-bold mb-2">Grupo Terroblan Industrial</h3>
                   <p className="text-slate-300">Soluciones integrales para la industria moderna.</p>
                 </div>
