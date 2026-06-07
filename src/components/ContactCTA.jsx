@@ -51,7 +51,6 @@ export default function ContactCTA() {
                   <User className="h-8 w-8 text-orange-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white">Atención Personalizada</h3>
-                <p className="text-lg text-white">Ing. Arturo Trejo</p>
                 <p className="text-sm text-white">Asesoría directa para su proyecto</p>
               </CardContent>
             </Card>

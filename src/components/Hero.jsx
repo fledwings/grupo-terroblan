@@ -100,7 +100,7 @@ export default function Hero() {
             {/* Buttons: DO NOT fade out, as requested */}
             <motion.div 
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-16 lg:mb-24"
+              className="flex flex-col sm:flex-row flex-wrap gap-4 w-full sm:w-auto mb-16 lg:mb-24"
             >
               <Button 
                 size="lg" 
@@ -109,6 +109,14 @@ export default function Hero() {
               >
                 Solicitar servicio
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-slate-700 bg-slate-900/50 text-white hover:bg-slate-800 hover:text-white transition-all duration-300 h-12 px-8 text-base"
+                onClick={() => scrollTo('solutions')}
+              >
+                Nuestros servicios
               </Button>
               <Button 
                 size="lg" 

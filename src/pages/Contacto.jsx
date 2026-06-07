@@ -96,14 +96,6 @@ export default function Contacto() {
 
                 <div className="space-y-6 flex-grow">
                   <div className="flex items-start">
-                    <User className="h-6 w-6 text-orange-400 mr-4 mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-semibold text-lg">Atención Personalizada</p>
-                      <p className="text-slate-300">Ing. Arturo Trejo</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
                     <Phone className="h-6 w-6 text-orange-400 mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-lg">Teléfono</p>
