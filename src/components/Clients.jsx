@@ -7,7 +7,7 @@ const clients = [
   { name: 'PPG', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/f9be1d9f-379a-44c6-a2ab-a269feb80d39' }, 
   { name: 'Kimberly-Clark', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/e00c5668-4763-4712-ba05-09c5d9502fda' }, 
   { name: 'Veolia', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/99140b52-6af6-4af8-b672-2a22384bcb5d' }, 
-  { name: 'Cartones Ponderosa', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/0387a02f-9e40-46e4-9f3d-572ca1df9cb7' }, 
+  { name: 'Cartones Ponderosa', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/eb608843-342d-4d8d-aed2-dcc96ef30ce2' }, 
   { name: 'CAQ', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/8010fee4-9a3f-4c7b-96cc-985075e3ef60' }, 
   { name: 'Cheersson', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/4baed3a3-4d0c-4b92-811d-8ff89d411f95' }, 
   { name: 'Niuco', logo: 'https://sensible-spoonbill-485.convex.cloud/api/storage/c4bf5b15-45cf-4db1-9cf8-b4b4c511f83f' }, 
@@ -37,7 +37,7 @@ export default function Clients() {
               className="bg-white rounded-lg border border-slate-200 shadow-sm flex items-center justify-center hover:shadow-md transition-all w-[140px] h-[90px] sm:w-[160px] sm:h-[100px] md:w-[180px] md:h-[110px] p-4"
             >
               {client.logo ? (
-                <img src={client.logo} alt={client.name} className={`h-12 md:h-16 w-auto object-contain ${client.name === 'Cartones Ponderosa' ? 'scale-[1.7]' : 'scale-110'}`} />
+                <img src={client.logo} alt={client.name} className={`max-h-full max-w-full object-contain ${client.name === 'Cartones Ponderosa' ? 'h-14 md:h-16' : 'h-12 md:h-16 scale-110'}`} />
               ) : (
                 <span className="font-semibold text-slate-900 text-sm md:text-base text-center">{client.name}</span>
               )}

@@ -146,6 +146,7 @@ export default function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            <button onClick={() => scrollTo('capacidad')} className="text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors">Capacidad Técnica</button>
             <button onClick={() => scrollTo('clients')} className="text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors">Clientes</button>
             <button onClick={() => scrollTo('locations')} className="text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors">Ubicaciones</button>
           </nav>
@@ -236,6 +237,7 @@ export default function Header() {
                   )}
                 </AnimatePresence>
               </div>
+              <button onClick={() => scrollTo('capacidad')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Capacidad Técnica</button>
               <button onClick={() => scrollTo('clients')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Clientes</button>
               <button onClick={() => scrollTo('locations')} className="text-left text-lg font-medium text-slate-600 hover:text-orange-600 transition-colors">Ubicaciones</button>
               
