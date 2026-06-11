@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Phone, Mail, User, FileText, Briefcase } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from '../lib/react-router-dom';
 
 export default function ContactCTA() {
   const navigate = useNavigate();

@@ -8,7 +8,6 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(process.cwd(), "src"),
-      "react-router-dom": path.resolve(process.cwd(), "src/lib/react-router-dom.tsx"),
     },
   },
 });

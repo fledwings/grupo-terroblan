@@ -1,6 +1,6 @@
 import React from 'react';
 import { HardHat, Phone, Mail, User } from 'lucide-react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from '../lib/react-router-dom';
 import {
   Dialog,
   DialogContent,
