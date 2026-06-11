@@ -7,7 +7,6 @@ import CapacidadTecnica from '../components/CapacidadTecnica';
 import Clients from '../components/Clients';
 import Locations from '../components/Locations';
 import ContactCTA from '../components/ContactCTA';
-import FloatingCallButton from '../components/FloatingCallButton';
 
 export default function Home() {
   return (
@@ -20,7 +19,6 @@ export default function Home() {
       <Clients />
       <Locations />
       <ContactCTA />
-      <FloatingCallButton />
     </>
   );
 }
