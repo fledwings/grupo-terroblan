@@ -4,6 +4,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import path from "node:path";
 
 export default defineConfig({
+  nitro: true,
   tanstackStart: {
     server: { entry: "server" },
   },
