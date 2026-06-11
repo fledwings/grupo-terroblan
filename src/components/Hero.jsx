@@ -46,7 +46,7 @@ export default function Hero() {
         {/* Concrete Plant Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://sensible-spoonbill-485.convex.cloud/api/storage/b21853f5-7045-4169-9c3f-845ea1632db6')" }}
+          style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
         />
         
         {/* Dark blur overlay to ensure legibility */}
@@ -82,12 +82,16 @@ export default function Hero() {
             <div>
               <motion.h1 
                 variants={itemVariants}
-                className="text-[2rem] min-[400px]:text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
+                className="text-[2rem] min-[400px]:text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-2 leading-[1.1]"
               >
                 <span className="whitespace-nowrap lg:whitespace-normal">GRUPO<span className="inline lg:hidden"> </span><br className="hidden lg:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">TERROBLAN</span></span>
-                <br />
-                <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">INDUSTRIAL</span>
               </motion.h1>
+              <motion.p
+                variants={itemVariants}
+                className="inline-block text-xl sm:text-2xl lg:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600 mb-6"
+              >
+                SERVICIOS ESPECIALIZADOS PARA LA INDUSTRIAL
+              </motion.p>
               
               <motion.p 
                 variants={itemVariants}

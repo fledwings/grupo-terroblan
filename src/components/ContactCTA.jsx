@@ -71,6 +71,9 @@ export default function ContactCTA() {
                 <a href="tel:4426767696" className="text-lg font-medium text-white hover:text-orange-400 transition-colors block">
                   442-676-7696
                 </a>
+                <a href="tel:4271200178" className="text-lg font-medium text-white hover:text-orange-400 transition-colors block">
+                  427-120-0178
+                </a>
                 <p className="text-sm text-white">Lunes a Viernes, 9:00 - 18:00</p>
               </CardContent>
             </Card>
@@ -90,6 +93,9 @@ export default function ContactCTA() {
                 <h3 className="text-xl font-semibold text-white">Escríbanos</h3>
                 <a href="mailto:arturo.trejo@grupoter.com.mx" className="text-md font-medium text-white hover:text-orange-400 transition-colors block break-all">
                   arturo.trejo@grupoter.com.mx
+                </a>
+                <a href="mailto:angel.trejo@grupoter.com.mx" className="text-md font-medium text-white hover:text-orange-400 transition-colors block break-all">
+                  angel.trejo@grupoter.com.mx
                 </a>
                 <p className="text-sm text-white">Respuestas en menos de 24h</p>
               </CardContent>
