@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Phone, Mail, User, FileText, Briefcase } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { useNavigate } from '../lib/react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function ContactCTA() {
   const navigate = useNavigate();
@@ -68,11 +68,8 @@ export default function ContactCTA() {
                   <Phone className="h-8 w-8 text-orange-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white">Llámenos</h3>
-                <a href="tel:4426767696" className="text-base font-medium text-white hover:text-orange-400 transition-colors block">
+                <a href="tel:4426767696" className="text-lg font-medium text-white hover:text-orange-400 transition-colors block">
                   442-676-7696
-                </a>
-                <a href="tel:4271200178" className="text-base font-medium text-white hover:text-orange-400 transition-colors block">
-                  427-120-0178
                 </a>
                 <p className="text-sm text-white">Lunes a Viernes, 9:00 - 18:00</p>
               </CardContent>
@@ -91,11 +88,8 @@ export default function ContactCTA() {
                   <Mail className="h-8 w-8 text-orange-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white">Escríbanos</h3>
-                <a href="mailto:arturo.trejo@grupoter.com.mx" className="text-sm font-medium text-white hover:text-orange-400 transition-colors block break-all">
+                <a href="mailto:arturo.trejo@grupoter.com.mx" className="text-md font-medium text-white hover:text-orange-400 transition-colors block break-all">
                   arturo.trejo@grupoter.com.mx
-                </a>
-                <a href="mailto:angel.trejo@grupoter.com.mx" className="text-sm font-medium text-white hover:text-orange-400 transition-colors block break-all">
-                  angel.trejo@grupoter.com.mx
                 </a>
                 <p className="text-sm text-white">Respuestas en menos de 24h</p>
               </CardContent>

@@ -99,8 +99,7 @@ export default function Contacto() {
                     <Phone className="h-6 w-6 text-orange-400 mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-lg">Teléfono</p>
-                      <a href="tel:4426767696" className="text-slate-300 hover:text-orange-400 transition-colors block">442-676-7696</a>
-                      <a href="tel:4271200178" className="text-slate-300 hover:text-orange-400 transition-colors block">427-120-0178</a>
+                      <a href="tel:4426767696" className="text-slate-300 hover:text-orange-400 transition-colors">442-676-7696</a>
                     </div>
                   </div>
                   
@@ -108,8 +107,7 @@ export default function Contacto() {
                     <Mail className="h-6 w-6 text-orange-400 mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-lg">Correo Electrónico</p>
-                      <a href="mailto:arturo.trejo@grupoter.com.mx" className="text-slate-300 hover:text-orange-400 transition-colors break-all block">arturo.trejo@grupoter.com.mx</a>
-                      <a href="mailto:angel.trejo@grupoter.com.mx" className="text-slate-300 hover:text-orange-400 transition-colors break-all block">angel.trejo@grupoter.com.mx</a>
+                      <a href="mailto:arturo.trejo@grupoter.com.mx" className="text-slate-300 hover:text-orange-400 transition-colors break-all">arturo.trejo@grupoter.com.mx</a>
                     </div>
                   </div>
 

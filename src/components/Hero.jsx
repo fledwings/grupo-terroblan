@@ -2,17 +2,6 @@ import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Wrench, Phone, ShieldCheck, Zap, BarChart3 } from 'lucide-react';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-
-const PHONES = [
-  { label: 'Arturo Trejo', number: '442-676-7696', tel: '4426767696' },
-  { label: 'Ángel Trejo', number: '427-120-0178', tel: '4271200178' },
-];
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -57,7 +46,7 @@ export default function Hero() {
         {/* Concrete Plant Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/hero-terroblan.jpg')" }}
+          style={{ backgroundImage: "url('https://sensible-spoonbill-485.convex.cloud/api/storage/b21853f5-7045-4169-9c3f-845ea1632db6')" }}
         />
         
         {/* Dark blur overlay to ensure legibility */}
@@ -91,15 +80,13 @@ export default function Hero() {
             className="flex flex-col items-center text-center lg:items-start lg:text-left max-w-3xl mx-auto lg:mx-0 lg:pl-12 xl:pl-24"
           >
             <div>
-              <motion.h1
+              <motion.h1 
                 variants={itemVariants}
                 className="text-[2rem] min-[400px]:text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]"
               >
                 <span className="whitespace-nowrap lg:whitespace-normal">GRUPO<span className="inline lg:hidden"> </span><br className="hidden lg:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">TERROBLAN</span></span>
                 <br />
-                <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600 text-lg sm:text-xl lg:text-3xl mt-2 lg:mt-3 tracking-wide uppercase">
-                  SERVICIOS ESPECIALIZADOS PARA LA INDUSTRIA
-                </span>
+                <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">INDUSTRIAL</span>
               </motion.h1>
               
               <motion.p 
@@ -131,28 +118,17 @@ export default function Hero() {
               >
                 Nuestros servicios
               </Button>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-slate-700 bg-slate-900/50 text-white hover:bg-slate-800 hover:text-white transition-all duration-300 h-12 px-8 text-base"
-                  >
-                    <Phone className="mr-2 h-4 w-4 text-slate-400" />
-                    Llamar ahora
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-56">
-                  {PHONES.map((p) => (
-                    <DropdownMenuItem key={p.tel} asChild>
-                      <a href={`tel:${p.tel}`} className="cursor-pointer">
-                        <Phone className="mr-2 h-4 w-4 text-orange-600" />
-                        <span className="font-medium">{p.number}</span>
-                      </a>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-slate-700 bg-slate-900/50 text-white hover:bg-slate-800 hover:text-white transition-all duration-300 h-12 px-8 text-base"
+                asChild
+              >
+                <a href="tel:4426767696">
+                  <Phone className="mr-2 h-4 w-4 text-slate-400" />
+                  Llamar ahora
+                </a>
+              </Button>
             </motion.div>
           </motion.div>
           

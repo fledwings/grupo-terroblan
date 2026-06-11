@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Link } from '../lib/react-router-dom';
+import { Link } from 'react-router-dom';
 import { solutionsData } from '../data/solutionsData';
 
 const containerVariants = {

@@ -51,36 +51,37 @@ const categories = [
 
 export default function CapacidadTecnica() {
   return (
-    <section id="capacidad" className="py-32 bg-white relative overflow-hidden">
+    <section id="capacidad" className="py-24 md:py-32 lg:py-40 xl:py-48 bg-white relative overflow-hidden">
       {/* Abstract Background Elements */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#f0f7ff] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 opacity-70 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-orange-50 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 opacity-60 pointer-events-none" />
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mb-24">
+      <div className="container mx-auto px-8 sm:px-12 md:px-20 lg:px-28 xl:px-36 max-w-7xl relative z-10">
+        <div className="max-w-4xl mx-auto mb-24 flex flex-col items-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="flex flex-col items-center"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0a192f] leading-tight mb-6">
-              Nuestra <span className="text-orange-500 relative">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0a192f] leading-tight mb-6 text-center">
+              Nuestra <span className="text-orange-500 relative inline-block">
                 Capacidad Técnica
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-orange-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="transparent"/>
                 </svg>
               </span> y Operativa
             </h2>
-            <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl text-center mx-auto">
               Respaldamos nuestros proyectos con infraestructura sólida, tecnología avanzada y un equipo altamente capacitado para garantizar resultados excepcionales en cada especialidad.
             </p>
           </motion.div>
         </div>
 
-        <div className="flex flex-col gap-32">
+        <div className="flex flex-col gap-32 md:gap-40 lg:gap-48">
           {categories.map((category, index) => (
-            <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-24 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+            <div key={index} className={`flex flex-col lg:flex-row items-center gap-16 lg:gap-32 xl:gap-40 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
               
               {/* Image Section - Natural layout without hard cards */}
               <motion.div 

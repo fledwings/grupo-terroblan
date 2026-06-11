@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, Link, useNavigate } from '../lib/react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';

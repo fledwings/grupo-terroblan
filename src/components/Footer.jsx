@@ -1,6 +1,6 @@
 import React from 'react';
 import { HardHat, Phone, Mail, User } from 'lucide-react';
-import { useLocation, useNavigate } from '../lib/react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
   Dialog,
   DialogContent,
@@ -54,16 +54,8 @@ export default function Footer() {
                 <a href="tel:4426767696" className="hover:text-orange-600 transition-colors">442-676-7696</a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-orange-500" />
-                <a href="tel:4271200178" className="hover:text-orange-600 transition-colors">427-120-0178</a>
-              </li>
-              <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-orange-500" />
                 <a href="mailto:arturo.trejo@grupoter.com.mx" className="hover:text-orange-600 transition-colors">arturo.trejo@grupoter.com.mx</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-orange-500" />
-                <a href="mailto:angel.trejo@grupoter.com.mx" className="hover:text-orange-600 transition-colors">angel.trejo@grupoter.com.mx</a>
               </li>
             </ul>
           </div>
