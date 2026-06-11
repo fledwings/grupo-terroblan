@@ -8,7 +8,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import heroBg from '@/assets/hero-terroblan.jpg.asset.json';
 
 const PHONES = [
   { label: 'Arturo Trejo', number: '442-676-7696', tel: '4426767696' },
@@ -58,7 +57,7 @@ export default function Hero() {
         {/* Concrete Plant Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('${heroBg.url}')` }}
+          style={{ backgroundImage: "url('/hero-terroblan.jpg')" }}
         />
         
         {/* Dark blur overlay to ensure legibility */}
