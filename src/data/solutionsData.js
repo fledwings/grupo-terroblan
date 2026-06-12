@@ -1,11 +1,11 @@
 import { Building2, Settings2, Wrench, Package } from 'lucide-react';
-import albanileriaAsset from '@/assets/terroblan-albanileria.jpg.asset.json';
-import tuberiaAsset from '@/assets/terroblan-tuberia-v2.jpg.asset.json';
-import fabricacionSoldaduraAsset from '@/assets/terroblan-fabricacion-soldadura-v2.jpg.asset.json';
-import mantenimientoAsset from '@/assets/terroblan-mantenimiento-2.jpg.asset.json';
-import mantenimientoIndustrialAsset from '@/assets/terroblan-mantenimiento-industrial-2.jpg.asset.json';
-import servicios1Asset from '@/assets/terroblan-servicios-1.jpg.asset.json';
-import servicios2Asset from '@/assets/terroblan-servicios-2.jpg.asset.json';
+import albanileriaImg from '@/assets/terroblan-albanileria.jpg';
+import tuberiaImg from '@/assets/terroblan-tuberia-v2.jpg';
+import fabricacionSoldaduraImg from '@/assets/terroblan-fabricacion-soldadura-v2.jpg';
+import mantenimientoImg from '@/assets/terroblan-mantenimiento-2.jpg';
+import mantenimientoIndustrialImg from '@/assets/terroblan-mantenimiento-industrial-2.jpg';
+import servicios1Img from '@/assets/terroblan-servicios-1.jpg';
+import servicios2Img from '@/assets/terroblan-servicios-2.jpg';
 
 export const solutionsData = [
   {
