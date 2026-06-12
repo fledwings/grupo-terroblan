@@ -1,4 +1,11 @@
 import { Building2, Settings2, Wrench, Package } from 'lucide-react';
+import albanileriaAsset from '@/assets/terroblan-albanileria.jpg.asset.json';
+import tuberiaAsset from '@/assets/terroblan-tuberia-v2.jpg.asset.json';
+import fabricacionSoldaduraAsset from '@/assets/terroblan-fabricacion-soldadura-v2.jpg.asset.json';
+import mantenimientoAsset from '@/assets/terroblan-mantenimiento-2.jpg.asset.json';
+import mantenimientoIndustrialAsset from '@/assets/terroblan-mantenimiento-industrial-2.jpg.asset.json';
+import servicios1Asset from '@/assets/terroblan-servicios-1.jpg.asset.json';
+import servicios2Asset from '@/assets/terroblan-servicios-2.jpg.asset.json';
 
 export const solutionsData = [
   {
@@ -25,8 +32,7 @@ export const solutionsData = [
     ],
     images: [
       'https://sensible-spoonbill-485.convex.cloud/api/storage/f134213f-659f-4f43-9d22-abecf3fc5c7e',
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/ccf577fe-3e88-4fd3-a78b-772ada1e864b',
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/097536cb-4e6d-492e-8c09-84fd8e05c581'
+      albanileriaAsset.url
     ]
   },
   {
@@ -51,8 +57,8 @@ export const solutionsData = [
       'Sistemas de conducción de fluidos industriales.'
     ],
     images: [
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/cd30da51-f1a3-4d94-86d7-94fb0323e8a2',
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/6df0cb42-d19e-4e0c-bff1-b074c20815fa'
+      tuberiaAsset.url,
+      fabricacionSoldaduraAsset.url
     ]
   },
   {
@@ -77,8 +83,8 @@ export const solutionsData = [
       'Mantenimiento correctivo de tableros de distribución.'
     ],
     images: [
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/0ea068f9-a2b0-47dc-a15e-f21a10b4aa74',
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/4493f943-8b22-4e10-9cae-e78cca45bd72'
+      mantenimientoAsset.url,
+      mantenimientoIndustrialAsset.url
     ]
   },
   {
@@ -104,8 +110,8 @@ export const solutionsData = [
       'Almacenamiento temporal de componentes industriales.'
     ],
     images: [
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/21d5bbd2-8501-4506-8f68-15f28ebcb9fe',
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/b21853f5-7045-4169-9c3f-845ea1632db6'
+      servicios1Asset.url,
+      servicios2Asset.url
     ]
   }
 ];

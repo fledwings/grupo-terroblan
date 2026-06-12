@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import { solutionsData } from '../data/solutionsData';
+import ImageCycler from './ImageCycler';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -57,11 +58,13 @@ export default function Solutions() {
                     {/* Featured Image Section */}
                     <div className="h-48 w-full relative overflow-hidden bg-slate-700 shrink-0 border-b border-slate-700">
                       {solution.images && solution.images.length > 0 ? (
-                        <img 
-                          src={solution.images[0]} 
-                          alt={solution.title} 
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        />
+                        <div className="w-full h-full transition-transform duration-700 group-hover:scale-105">
+                          <ImageCycler
+                            images={solution.images}
+                            alt={solution.title}
+                            interval={3500 + index * 400}
+                          />
+                        </div>
                       ) : (
                         <div className="w-full h-full flex flex-col items-center justify-center text-slate-500 bg-slate-800">
                           <IconComponent className="h-10 w-10 mb-2 opacity-40" />
