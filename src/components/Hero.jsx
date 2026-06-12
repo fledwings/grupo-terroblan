@@ -90,7 +90,7 @@ export default function Hero() {
                 variants={itemVariants}
                 className="inline-block text-xl sm:text-2xl lg:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600 mb-6"
               >
-                SERVICIOS ESPECIALIZADOS PARA LA INDUSTRIAL
+                SERVICIOS ESPECIALIZADOS PARA LA INDUSTRIA
               </motion.p>
               
               <motion.p 
