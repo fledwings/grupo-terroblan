@@ -4,7 +4,7 @@ import { MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const locations = [
-  { city: 'Oficina Matriz', state: 'Querétaro' },
+  { city: 'Oficina Matriz - San Juan del Rio', state: 'Querétaro' },
   { city: 'Zapopan', state: 'Jalisco' },
   { city: 'Mérida', state: 'Yucatán' },
   { city: 'Estado', state: 'Coahuila' },
