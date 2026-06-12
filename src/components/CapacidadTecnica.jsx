@@ -81,7 +81,7 @@ export default function CapacidadTecnica() {
 
         <div className="flex flex-col gap-32 md:gap-40 lg:gap-48">
           {categories.map((category, index) => (
-            <div key={index} className={`flex flex-col lg:flex-row items-center gap-16 lg:gap-32 xl:gap-40 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+            <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-20 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
               
               {/* Image Section - Natural layout without hard cards */}
               <motion.div 
@@ -89,7 +89,7 @@ export default function CapacidadTecnica() {
                 whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="w-full lg:w-1/2 relative"
+                className="w-full lg:w-3/5 relative"
               >
                 <div className="relative aspect-[4/3] w-full group">
                   {/* Decorative background shape */}
@@ -116,7 +116,7 @@ export default function CapacidadTecnica() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="w-full lg:w-1/2"
+                className="w-full lg:w-2/5"
               >
                 <h3 className="text-3xl lg:text-4xl font-bold text-[#0a192f] mb-8 relative inline-block">
                   {category.title}
