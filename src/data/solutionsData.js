@@ -32,7 +32,7 @@ export const solutionsData = [
     ],
     images: [
       'https://sensible-spoonbill-485.convex.cloud/api/storage/f134213f-659f-4f43-9d22-abecf3fc5c7e',
-      albanileriaAsset.url
+      albanileriaImg
     ]
   },
   {
@@ -57,8 +57,8 @@ export const solutionsData = [
       'Sistemas de conducción de fluidos industriales.'
     ],
     images: [
-      tuberiaAsset.url,
-      fabricacionSoldaduraAsset.url
+      tuberiaImg,
+      fabricacionSoldaduraImg
     ]
   },
   {
@@ -83,8 +83,8 @@ export const solutionsData = [
       'Mantenimiento correctivo de tableros de distribución.'
     ],
     images: [
-      mantenimientoAsset.url,
-      mantenimientoIndustrialAsset.url
+      mantenimientoImg,
+      mantenimientoIndustrialImg
     ]
   },
   {
@@ -110,8 +110,8 @@ export const solutionsData = [
       'Almacenamiento temporal de componentes industriales.'
     ],
     images: [
-      servicios1Asset.url,
-      servicios2Asset.url
+      servicios1Img,
+      servicios2Img
     ]
   }
 ];
