@@ -34,29 +34,46 @@ export default function Contacto() {
     setFormData(prev => ({ ...prev, service: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const serviceLabels = {
+    'obra-civil': 'Obra Civil y Construcción',
+    'mantenimiento': 'Mantenimiento Industrial',
+    'estructura-metalica': 'Estructura Metálica',
+    'remodelaciones': 'Remodelaciones y Acabados',
+    'otro': 'Otro servicio / Consulta general',
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
     try {
-      const { data, error } = await supabase.functions.invoke('send-email', {
-        body: formData,
-      });
+      const destinatarios = 'arturo.trejo@grupoter.com.mx,angel.trejo@grupoter.com.mx';
+      const asunto = `Solicitud de Servicio - ${serviceLabels[formData.service] || 'Consulta'} - ${formData.company}`;
+      const cuerpo =
+`Hola, soy ${formData.name} de la empresa ${formData.company}.
 
-      if (error) throw error;
-      
+Me gustaría solicitar información sobre el siguiente servicio:
+${serviceLabels[formData.service] || formData.service}
+
+Detalles del proyecto:
+${formData.message}
+
+Mis datos de contacto:
+- Nombre: ${formData.name}
+- Empresa: ${formData.company}
+- Correo: ${formData.email}
+- Teléfono: ${formData.phone}
+
+Quedo atento a su respuesta.
+Saludos.`;
+
+      const mailtoUrl = `mailto:${destinatarios}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+      window.location.href = mailtoUrl;
+
       setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        message: ''
-      });
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error('Error abriendo el cliente de correo:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -146,9 +163,9 @@ export default function Contacto() {
                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                       <CheckCircle2 className="h-10 w-10 text-green-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900">¡Mensaje Enviado con Éxito!</h3>
+                    <h3 className="text-2xl font-bold text-slate-900">¡Abrimos su aplicación de correo!</h3>
                     <p className="text-slate-600 max-w-md mx-auto">
-                      Gracias por contactarnos. Hemos recibido su solicitud y nuestro equipo se comunicará con usted a la brevedad.
+                      Hemos preparado su mensaje en su aplicación de correo. Solo presione <strong>Enviar</strong> para que recibamos su solicitud. Nuestro equipo le responderá a la brevedad.
                     </p>
                     <Button 
                       className="mt-6 bg-orange-600 hover:bg-orange-700 text-white"

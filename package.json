@@ -43,7 +43,7 @@
     "@remotion/transitions": "^4.0.409",
     "@stripe/react-stripe-js": "5.4.1",
     "@stripe/stripe-js": "8.6.0",
-    "@supabase/supabase-js": "2.89.0",
+    "@supabase/supabase-js": "^2.108.2",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
