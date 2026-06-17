@@ -13,7 +13,7 @@ const categories = [
       "Aplicación de soldaduras y fabricación de ductos",
       "Montaje e instalación de maquinaria"
     ],
-    image: "https://sensible-spoonbill-485.convex.cloud/api/storage/1d1e3c4c-7157-4c7d-8670-93e7d1b012b0"
+    image: "/__l5e/assets-v1/9ea04dc9-f781-434b-94e0-bff3e144d8ee/instalacion_y_montaje_final-2.png"
   },
   {
     title: "Mantenimiento Industrial",
@@ -36,7 +36,7 @@ const categories = [
       "Impermeabilizaciones",
       "Diseño arquitectónico"
     ],
-    image: "https://sensible-spoonbill-485.convex.cloud/api/storage/af924c5d-855b-4993-b45f-1091e86d8f91"
+    image: "/__l5e/assets-v1/5b369103-2c37-4b40-ab6c-089f7055799d/contruccion_y_mo_taje_final-2.png"
   },
   {
     title: "Procesos Especializados",
@@ -45,7 +45,7 @@ const categories = [
       "Rolado, corte y doblez de lámina en acero al carbón / inoxidable",
       "Supervisión técnica de proyectos"
     ],
-    image: "https://sensible-spoonbill-485.convex.cloud/api/storage/5f7b754f-701b-4e77-a084-94f05aceb3e3"
+    image: "/__l5e/assets-v1/2f70d902-3db8-4537-8b6a-691102ad79f2/procesos_especializados_final.jpg"
   }
 ];
 

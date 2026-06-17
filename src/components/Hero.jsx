@@ -160,7 +160,7 @@ export default function Hero() {
                   className="absolute w-64 h-64 rounded-full border border-orange-500/20 flex items-center justify-center"
                 >
                   <div className="w-48 h-48 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center shadow-2xl border border-slate-700/50">
-                    <Wrench className="w-16 h-16 text-slate-600" strokeWidth={1} />
+                    <img src="/__l5e/assets-v1/a4c9bc96-9e89-41e8-9b73-41560ec7358f/gears.png" alt="Engranajes" className="w-24 h-24 object-contain" />
                   </div>
                 </motion.div>
                 

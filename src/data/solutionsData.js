@@ -6,6 +6,7 @@ import mantenimientoImg from '@/assets/terroblan-mantenimiento-2.jpg';
 import mantenimientoIndustrialImg from '@/assets/terroblan-mantenimiento-industrial-2.jpg';
 import servicios1Img from '@/assets/terroblan-servicios-1.jpg';
 import servicios2Img from '@/assets/terroblan-servicios-2.jpg';
+import instalacionMontajeFinalImg from '@/assets/instalacion_y_montaje_final.png.asset.json';
 
 export const solutionsData = [
   {
@@ -18,7 +19,7 @@ export const solutionsData = [
       'Montajes electromecánicos.',
       'Instalaciones eléctricas.'
     ],
-    description: 'Ofrecemos servicios integrales de construcción y montaje para el sector industrial, garantizando la correcta ejecución de obras civiles, instalaciones eléctricas y montajes electromecánicos con los más altos estándares de calidad y seguridad.',
+    description: 'Ofrecemos servicios integrales de construcción y montaje para el sector industrial, garantizando la correcta ejecución de obras civiles.',
     benefits: [
       'Ejecución integral de proyectos desde la obra civil hasta el montaje final.',
       'Cumplimiento estricto de normativas de seguridad y calidad.',
@@ -31,7 +32,7 @@ export const solutionsData = [
       'Montaje de estructuras metálicas y equipos pesados.'
     ],
     images: [
-      'https://sensible-spoonbill-485.convex.cloud/api/storage/f134213f-659f-4f43-9d22-abecf3fc5c7e',
+      instalacionMontajeFinalImg.url,
       albanileriaImg
     ]
   },
@@ -63,14 +64,14 @@ export const solutionsData = [
   },
   {
     id: 'mantenimiento-industrial',
-    title: 'Mantenimiento Industrial',
+    title: 'Montajes Electromecanicos, Instalaciones Electricas y Mantenimiento Industrial.',
     icon: Wrench,
     color: 'bg-emerald-100 text-emerald-700',
     items: [
       'Mantenimiento mecánico y eléctrico (preventivo y correctivo).',
       'Mantenimiento integral de techos.'
     ],
-    description: 'Servicio integral de mantenimiento preventivo y correctivo para equipos, sistemas mecánicos y eléctricos. Nos enfocamos en mantener la operatividad y extender la vida útil de sus activos industriales.',
+    description: 'Servicio integral de mantenimiento preventivo y correctivo para equipos, sistemas mecánicos y eléctricos. Nos enfocamos en mantener la operatividad y extender la vida útil de sus activos industriales. Instalaciones eléctricas y montajes electromecánicos con los más altos estándares de calidad y seguridad.',
     benefits: [
       'Prevención de fallas inesperadas y reducción de paros no programados.',
       'Extensión de la vida útil de los equipos e instalaciones.',

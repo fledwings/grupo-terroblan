@@ -61,8 +61,8 @@ export default function AboutUs() {
                     <Flag className="h-6 w-6 text-orange-600 md:hidden" />
                     <h3 className="text-2xl font-bold text-slate-900">Misión</h3>
                   </div>
-                  <p className="text-xl md:text-2xl font-medium text-slate-700 leading-relaxed italic border-l-4 border-orange-500 pl-4 md:border-0 md:pl-0 md:italic-0">
-                    "Construimos confianza, creamos futuro"
+                  <p className="text-slate-600 text-lg leading-relaxed">
+                    Brindar soluciones integrales con calidad, seguridad y compromiso construyendo relaciones de confianza que impulsen el crecimiento de nuestros clientes y el desarrollo sostenible de nuestra organizacion.
                   </p>
                 </div>
               </div>
@@ -82,10 +82,10 @@ export default function AboutUs() {
                 <div>
                   <div className="flex items-center gap-3 mb-3 md:mb-2">
                     <Eye className="h-6 w-6 text-blue-600 md:hidden" />
-                    <h3 className="text-2xl font-bold text-slate-900">Visión 2030</h3>
+                    <h3 className="text-2xl font-bold text-slate-900">Visión</h3>
                   </div>
                   <p className="text-slate-600 text-lg leading-relaxed">
-                    Ser reconocidos a nivel nacional como una empresa líder en servicios integrales de obra civil, eléctrica y mecánica, destacando por la innovación, la confianza y el compromiso con el desarrollo sostenible y el cuidado del medio ambiente.
+                    Ser una empresa lider en servicios industriales en Mexico, reconocida por su excelencia operativa, confiablidad y capacidad para generar valor sostenible a nuestros clientes.
                   </p>
                 </div>
               </div>
