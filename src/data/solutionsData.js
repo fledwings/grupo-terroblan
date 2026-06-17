@@ -6,7 +6,7 @@ import mantenimientoImg from '@/assets/terroblan-mantenimiento-2.jpg';
 import mantenimientoIndustrialImg from '@/assets/terroblan-mantenimiento-industrial-2.jpg';
 import servicios1Img from '@/assets/terroblan-servicios-1.jpg';
 import servicios2Img from '@/assets/terroblan-servicios-2.jpg';
-import instalacionMontajeFinalImg from '@/assets/instalacion_y_montaje_final.png.asset.json';
+const instalacionMontajeFinalImg = { url: '/images/instalacion-montaje-solutions.png' };
 
 export const solutionsData = [
   {
