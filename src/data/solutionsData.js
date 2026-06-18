@@ -16,8 +16,7 @@ export const solutionsData = [
     color: 'bg-blue-100 text-blue-700',
     items: [
       'Obra Civil.',
-      'Montajes electromecánicos.',
-      'Instalaciones eléctricas.'
+      'Montajes electromecánicos.'
     ],
     description: 'Ofrecemos servicios integrales de construcción y montaje para el sector industrial, garantizando la correcta ejecución de obras civiles.',
     benefits: [
@@ -69,7 +68,8 @@ export const solutionsData = [
     color: 'bg-emerald-100 text-emerald-700',
     items: [
       'Mantenimiento mecánico y eléctrico (preventivo y correctivo).',
-      'Mantenimiento integral de techos.'
+      'Mantenimiento integral de techos.',
+      'Instalaciones eléctricas.'
     ],
     description: 'Servicio integral de mantenimiento preventivo y correctivo para equipos, sistemas mecánicos y eléctricos. Nos enfocamos en mantener la operatividad y extender la vida útil de sus activos industriales. Instalaciones eléctricas y montajes electromecánicos con los más altos estándares de calidad y seguridad.',
     benefits: [
